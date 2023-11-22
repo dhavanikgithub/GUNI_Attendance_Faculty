@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    app:fragment="com.example.SyncFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="@string/settings_heading">
+
+        <EditTextPreference
+            app:key="moodle_url"
+            app:title="@string/set_moodle_url"
+            app:useSimpleSummaryProvider="true"
+            app:icon="@drawable/ic_baseline_insert_link_24"/>
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

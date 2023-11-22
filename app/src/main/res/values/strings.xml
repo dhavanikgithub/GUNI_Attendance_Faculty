@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">Faculty</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="enter_your_email_address">Your email address</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="select_sem">Select Sem</string>
+    <string name="register">Register</string>
+    <string name="image">Image</string>
+    <string name="permission_camera_rationale">Camera permission is needed to show the camera preview.</string>
+    <string name="set_pin">Set pin</string>
+    <string name="enter_your_name">Your name</string>
+    <string name="faculty_name">Faculty Name</string>
+    <string name="take_attendance">Take Attendance</string>
+    <string name="student_list">Student list</string>
+    <string name="enter_pin">Enter pin</string>
+    <string name="let_s_go">Let\'s Go</string>
+    <string name="login">Login</string>
+    <string name="select_elective_subject_1">Select elective subject 1</string>
+    <string name="select_elective_subject_2">Select elective subject 2</string>
+    <string name="el_subject_1">el subject 1</string>
+    <string name="el_subject_2">el subject 2</string>
+    <string name="select_lab">Select lab</string>
+    <string name="select_class">Select class</string>
+    <string name="enter_your_enrolment_number">Your enrolment number</string>
+    <string name="enrolment_number">Enrolment number</string>
+    <string name="name">Name</string>
+    <string name="enable">Generate QR Code</string>
+    <string name="disable">Disable</string>
+    <string name="student_name">Student Name</string>
+    <string name="select_subject">Select subject</string>
+    <string name="sign_out">Sign out</string>
+    <string name="edit">edit</string>
+    <string name="semester">Semester:</string>
+    <string name="class_lab">Class: Lab:</string>
+    <string name="update_student">Update Student</string>
+    <string name="select_branch">Select Branch</string>
+    <string name="location">Latitude:  \nLongitude: </string>
+    <string name="accuracy">Accuracy: </string>
+    <string name="register_faculty">Register Faculty</string>
+    <string name="already_user_nlogin_here">Already user?\nLogin here</string>
+    <string name="delete">Delete</string>
+    <string name="delete_all">Delete All</string>
+    <string name="class_name">Class name</string>
+    <string name="lecture">Lecture</string>
+    <string name="moodle_username">Username</string>
+    <string name="moodle_url">Moodle URL</string>
+    <string name="select_type">Session</string>
+    <string name="select_session">Select Session</string>
+    <string name="setting">setting</string>
+    <string name="core_token">4f3c9f8f0404a7db50825391c295937e</string>
+    <string name="attendance_token">697859a828111d63c3f68543ac986827</string>
+    <string name="file_token">8d29dd97dd7c93b0e3cdd43d4b797c87</string>
+    <string name="set_moodle_url">Set Moodle Url</string>
+    <string name="settings_heading">Update URL</string>
+    <string-array name="semester">
+        <item>CEIT-A_AI</item>
+        <item>CEIT-A_UED</item>
+        <item>CEIT-A_CC</item>
+        <item>CEIT-A_TOC</item>
+        <item>CEIT-B_AI</item>
+        <item>CEIT-B_UED</item>
+        <item>CEIT-B-CC</item>
+        <item>CEIT-B-TOC</item>
+        <item>CEIT-C_AI</item>
+        <item>CEIT-C_UED</item>
+        <item>CEIT-C_CC</item>
+        <item>CEIT-C_TOC</item>
+        <item>CEIT-D_AI</item>
+        <item>CEIT-D_UED</item>
+        <item>CEIT-D_CC</item>
+        <item>CEIT-D_TOC</item>
+    </string-array>
+    <string-array name="type">
+        <item>Lecture</item>
+        <item>Lab</item>
+    </string-array>
+    <string-array name="branch">
+        <item>CE/IT</item>
+        <item>AI</item>
+    </string-array>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="courses">Courses</string>
+    <string name="labs">Labs</string>
+    <string name="logout">Logout</string>
+    <string name="positive">Positive</string>
+    <string name="negative">negative</string>
+    <string name="title_here">Session Information</string>
+    <string name="select_date">Select Date</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+</resources>

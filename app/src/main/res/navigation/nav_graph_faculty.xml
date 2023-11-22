@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_auth"
+    app:startDestination="@id/leaveLoginFragment">
+
+    <fragment
+        android:id="@+id/facultyHomeFragment"
+        android:name="com.example.guniattendancefaculty.faculty.facultyfragments.ui.facultyhome.FacultyHomeFragment"
+        android:label="@string/app_name">
+        <action
+            android:id="@+id/action_facultyHomeFragment_to_enableAttendanceFragment"
+            app:destination="@id/enableAttendanceFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/enableAttendanceFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_facultyHomeFragment_to_studentLeaveFragment"
+            app:destination="@id/studentLeaveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/enableAttendanceFragment"
+        android:name="com.example.guniattendancefaculty.faculty.facultyfragments.ui.enableattendance.EnableAttendanceFragment"
+        android:label="@string/app_name">
+        <action
+            android:id="@+id/action_enableAttendanceFragment_to_qrCodeFragment"
+            app:destination="@id/qrCodeFragment" />
+        <action
+            android:id="@+id/action_enableAttendanceFragment_to_studentListFragment"
+            app:destination="@id/studentListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentListFragment"
+        android:name="com.example.guniattendancefaculty.faculty.facultyfragments.ui.studentlist.StudentListFragment"
+        android:label="@string/app_name">
+        <action
+            android:id="@+id/action_studentListFragment_to_editStudentFragment"
+            app:destination="@id/editStudentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editStudentFragment"
+        android:name="com.example.guniattendancefaculty.faculty.facultyfragments.ui.editstudent.EditStudentFragment"
+        android:label="@string/app_name">
+        <argument
+            android:name="uid"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/qrCodeFragment"
+        android:name="com.example.guniattendancefaculty.faculty.facultyfragments.ui.qrcode.QrCodeFragment"
+        android:label="@string/app_name" />
+    <fragment
+        android:id="@+id/studentLeaveFragment"
+        android:name="com.example.guniattendancefaculty.faculty.facultyfragments.ui.leavemodule.studentleave.StudentLeaveFragment"
+        android:label="@string/app_name" >
+        <action
+            android:id="@+id/action_studentLeaveFragment_to_leaveViewFragment"
+            app:destination="@id/leaveViewFragment" />
+        <action
+            android:id="@+id/action_studentLeaveFragment_to_leaveLoginFragment"
+            app:destination="@id/leaveLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/leaveViewFragment"
+        android:name="com.example.guniattendancefaculty.faculty.facultyfragments.ui.leavemodule.leaveview.LeaveViewFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_leave_view" />
+    <fragment
+        android:id="@+id/leaveLoginFragment"
+        android:name="com.example.guniattendancefaculty.faculty.facultyfragments.ui.leavemodule.leavelogin.LeaveLoginFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_leave_login" >
+        <action
+            android:id="@+id/action_leaveLoginFragment_to_studentLeaveFragment"
+            app:destination="@id/studentLeaveFragment" />
+    </fragment>
+</navigation>

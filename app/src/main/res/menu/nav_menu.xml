@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item_self"
+        android:enabled="true"
+        android:title="Self"
+        android:checked="true"
+        android:icon="@drawable/ic_round_person_24" />
+
+    <item
+        android:id="@+id/item_proxy"
+        android:enabled="true"
+        android:title="Proxy"
+        android:icon="@drawable/baseline_supervised_user_circle_24"/>
+</menu>

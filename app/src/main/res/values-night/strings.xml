@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_here">Session Information</string>
+    <string name="select_date">Select Date</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+</resources>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading_animation" />
+
+
+    <!--<io.ak1.BubbleTabBar
+        android:id="@+id/bubbleTabBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:bubbletab_title_size="18sp"
+        app:bubbletab_icon_size="20dp"
+        android:padding="5dp"
+        app:bubbletab_custom_font="@font/montserrat_regular"
+        app:bubbletab_icon_padding="12sp"
+        app:bubbletab_menuResource="@menu/nav_menu"
+        app:layout_constraintTop_toTopOf="parent"
+        />-->
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="-229dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/logged_in_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="LoggedIn user name"
+                android:textAlignment="center"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/btn_logout"
+                app:layout_constraintEnd_toStartOf="@id/btn_logout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btn_logout" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_logout"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/button_background"
+                android:letterSpacing="0.10"
+                android:text="Logout"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_faculty"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/btn_logout"
+                app:layout_constraintVertical_bias="0.3">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteFaculty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Faculty Name (Proxy)"
+                    android:inputType="none"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_courses"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/tl_faculty"
+                app:layout_constraintVertical_bias="0.3">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteCourse"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/courses"
+                    android:inputType="none"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_labs"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/tl_courses">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTvLectureLabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Lecture/Labs"
+                    android:inputType="none"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_place"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/tl_labs">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTvplace"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Place"
+                    android:inputType="none"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_session"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_100sdp"
+                app:endIconDrawable="@drawable/baseline_refresh_24"
+                app:layout_constraintTop_toBottomOf="@id/tl_place">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTvSession"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/select_type"
+                    android:inputType="none"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/session_add"
+                style="@style/Widget.Material3.FloatingActionButton.Small.Surface"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="@+id/tl_session"
+                app:layout_constraintStart_toEndOf="@id/tl_session"
+                app:layout_constraintTop_toTopOf="@+id/tl_session"
+                app:srcCompat="@android:drawable/ic_input_add" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_attendance"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:endIconDrawable="@android:drawable/ic_input_add"
+                app:layout_constraintTop_toBottomOf="@id/tl_session">
+
+                <TextView
+                    android:id="@+id/autoCompleteTvAttendance"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/textview_border"
+                    android:gravity="center_vertical"
+                    android:hint="Click Here for Attendance"
+                    android:inputType="none"
+                    android:padding="20dp"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_range"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/tl_attendance"
+                android:hint="Enter Range">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/autoCompleteTvRange"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/button_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/tl_range">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_studentlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:background="@drawable/button_background"
+                    android:letterSpacing="0.16"
+                    android:text="Student List"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_leave"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:background="@drawable/button_background"
+                    android:letterSpacing="0.16"
+                    android:text="Leave"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_start_att_qr"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/button_background"
+                    android:letterSpacing="0.16"
+                    android:text="@string/enable"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="100"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginHorizontal="@dimen/_20sdp">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnstart_att"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:background="@drawable/button_background"
+                        android:letterSpacing="0.16"
+                        android:text="Start"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        android:layout_weight="50" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnstop_att"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/button_background"
+                        android:letterSpacing="0.16"
+                        android:text="Stop"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        android:layout_weight="50"/>
+                </LinearLayout>
+
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_qrlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@drawable/button_background"
+                    android:letterSpacing="0.16"
+                    android:text="Last QR Code"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

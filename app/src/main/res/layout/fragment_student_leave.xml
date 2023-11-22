@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/main_background">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading_animation" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_leave_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/button_background"
+        android:letterSpacing="0.16"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_12sdp"
+        android:layout_gravity="right"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leave Application History"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:textSize="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"/>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:gravity="right"
+        android:paddingEnd="@dimen/_20sdp"
+        >
+        <CheckBox android:id="@+id/checkbox_approved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Approved"
+            android:buttonTint="#0D99FF"/>
+        <CheckBox android:id="@+id/checkbox_pending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pending"
+            android:buttonTint="#0D99FF"/>
+        <CheckBox android:id="@+id/checkbox_rejected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rejected"
+            android:buttonTint="#0D99FF"/>
+        <CheckBox android:id="@+id/checkbox_delivered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivered"
+            android:buttonTint="#0D99FF"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_130sdp"
+        android:gravity="right"
+        android:paddingEnd="@dimen/_20sdp"
+        >
+        <CheckBox android:id="@+id/checkbox_canceled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Canceled"
+            android:buttonTint="#0D99FF"/>
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/leave_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_170sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        tools:listitem="@layout/request_item_view"
+        android:elevation="10dp"
+        />
+
+</FrameLayout>
